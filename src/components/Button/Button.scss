@@ -192,6 +192,14 @@ $spinner-size: rem(20px);
     margin-right: 0;
   }
 }
+
+.plainDestructive {
+  color: color('red');
+  &:hover {
+    color: color('red', 'dark');
+  }
+}
+
 // stylelint-enable selector-max-specificity
 
 .sizeSlim {

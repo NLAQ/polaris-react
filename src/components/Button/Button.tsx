@@ -108,6 +108,7 @@ function Button({
   polaris: {intl},
 }: CombinedProps) {
   const isDisabled = disabled || loading;
+  const isPlainDestructive = plain && destructive;
   const className = classNames(
     styles.Button,
     primary && styles.primary,
@@ -116,6 +117,7 @@ function Button({
     isDisabled && styles.disabled,
     loading && styles.loading,
     plain && styles.plain,
+    isPlainDestructive && styles.plainDestructive,
     monochrome && styles.monochrome,
     size && size !== DEFAULT_SIZE && styles[variationName('size', size)],
     fullWidth && styles.fullWidth,
